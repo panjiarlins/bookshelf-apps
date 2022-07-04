@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Bookshelf Apps</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Bookshelf Apps</h1>
+            <nav>
+                <ul>
+                    <li onclick="showInput(event, true)">INPUT BUKU BARU</li>
+                    <li onclick="showInput(event, false)">BUKA RAK BUKU</li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="card">
+                <h2>Masukkan Buku Baru</h2>
+                <form id="inputBook">
+                    <div class="input card">
+                        <label for="inputBookTitle">Judul</label>
+                        <input id="inputBookTitle" class="card-input" type="text" required>
+                    </div>
+                    <div class="input card">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" class="card-input" type="text" required>
+                    </div>
+                    <div class="input card">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" class="card-input" type="number" required>
+                    </div>
+                    <div class="card">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                        <input id="inputBookIsComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" onclick="input(event)" class="card button-big" type="submit">Masukkan Buku ke rak <span id="submit-rak"><b>BELUM SELESAI DIBACA</b></span></button>
+                </form>
+            </section>
+
+            <section class="card">
+                <h2>Cari Buku</h2>
+                <form id="searchBook" class="card">
+                    <label for="searchBookTitle">Masukkan Judul Buku</label>
+                    <div>
+                        <input id="searchBookTitle" oninput="searchBookByTitle(event)" class="card-input" type="text">
+                        <button id="searchSubmit" onclick="searchBookByTitle(event)" class="card button-small" type="submit">Cari</button>
+                    </div>
+                </form>
+            </section>
+        
+            <section class="card">
+                <h2>Belum selesai dibaca</h2>
+                <div id="incompleteBookshelfList"><!-- LIST OF BOOKS --></div>
+            </section>
+        
+            <section class="card">
+                <h2>Selesai dibaca</h2>
+                <div id="completeBookshelfList"><!-- LIST OF BOOKS --></div>
+            </section>
+        </main>
+        <footer>&copy; 2021, Panji Arlin Saputra</footer>
+        <script src="script.js"></script>
+    </body>
+</html>

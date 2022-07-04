@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    color: #14274E;
+}
+
+body {
+    background-color: #FFF8CD;
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: skyblue;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+}
+
+header > h1 {
+    flex-basis: 50%;
+    text-align: right;
+    align-self: center;
+    font-size: 2em;
+    font-weight: bolder;
+    color: white;
+}
+
+header > nav {
+    flex-basis: 50%;
+    text-align: left;
+    align-self: center;
+}
+
+header li {
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    display: inline;
+    list-style-type: none;
+    margin-left: 1%;
+    background-color: #FFE05D;
+    padding: 0.8%;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+header li:hover {
+    background-color: #FFF8CD;
+}
+
+main > * {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit {
+    display: none;
+}
+
+section {
+    background-color: #FFE05D;
+}
+
+section > * {
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.card-input {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 5px;
+    border-style: none;
+    margin-top: 5px;
+}
+
+.input > * {
+    width: 100%;
+}
+
+#inputBook {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#inputBook > div,
+#searchBook {
+    margin-bottom: 10px;
+    background-color: #FFF8CD;
+    text-align: left;
+}
+
+.button-big {
+    background-color: skyblue;
+    border-style: none;
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#searchBook > label {
+    width: 100%;
+}
+
+#searchBook > div {
+    display: flex;
+    flex-direction: row;
+}
+
+#searchBookTitle {
+    flex-basis: 79%;
+    width: 50%;
+    margin-right: 1%;
+}
+
+#searchSubmit{
+    flex-basis: 20%;
+}
+
+.button-small {
+    background-color: skyblue;
+    border-style: none;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+article > div {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2%;
+    padding-right: 2%;
+    flex-grow: 1;
+    margin: 2px;
+}
+
+article > div:nth-child(1) > input {
+    flex-basis: 100%;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+article > div:nth-child(2) > p,
+article > div:nth-child(3) > p {
+    flex-basis: 10%;
+    font-weight: bold;
+    text-align: left;
+}
+article > div:nth-child(2) > input,
+article > div:nth-child(3) > input {
+    flex-basis: 90%;
+    width: 100%;
+    font-size: 1em;
+}
+
+.output {
+    border-style: none;
+    background-color: white;
+}
+
+.action > button:nth-child(1) {
+    background-color: #77D970;
+    flex-grow: 1;
+}
+
+.action > button:nth-child(2) {
+    background-color: #FF0075;
+    flex-grow: 1;
+    margin: 0 0.5% 0 0.5%;
+}
+
+.action > button:nth-child(3),
+.action > button:nth-child(4) {
+    background-color: #212121;
+    flex-grow: 1;
+}
+
+footer {
+    margin-top: 1%;
+    padding: 1%;
+    color: white;
+    background-color: #035397;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        flex-direction: column;
+    }
+
+    header > * {
+        flex-grow: 1;
+        width: 80%;
+        margin: 0;
+    }
+
+    main > * {
+        width: 90%;
+    }
+}
